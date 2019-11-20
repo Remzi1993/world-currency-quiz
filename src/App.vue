@@ -1,5 +1,5 @@
 <template>
-  <div class="container" id="app">
+  <div id="app">
     <router-view/>
   </div>
 </template>
@@ -9,13 +9,33 @@
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 60vh;
+  %button {
+    display: inline-block;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 10px 30px;
+  }
+  .button-green {
+    @extend %button;
+    border: 1px solid #3b8070;
+    color: #3b8070;
+  }
+  .button-green:hover {
+    color: #fff;
+    background-color: #3b8070;
+    text-decoration: none;
+  }
+  .button-grey {
+    @extend %button;
+    border: 1px solid #35495e;
+    color: #35495e;
+    margin-left: 15px;
+  }
+  .button-grey:hover {
+    color: #fff;
+    background-color: #35495e;
+    text-decoration: none;
+  }
 }
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
@@ -33,5 +53,4 @@
 @media (min-width: 1200px) {
   #app { min-height: 90vh; }
 }
-
 </style>
