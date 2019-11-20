@@ -244,6 +244,9 @@ body {
       margin: 2vh 0 1vh;
       filter: invert(100%);
     }
+    .logo:hover {
+      filter: invert(93%) sepia(14%) saturate(6987%) hue-rotate(344deg) brightness(97%) contrast(99%);
+    }
   }
   .card-deck {
     flex-flow: column;
