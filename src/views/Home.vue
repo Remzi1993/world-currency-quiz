@@ -92,6 +92,7 @@ export default {
   .logo {
     max-width: 15vw;
     margin-bottom: 2vw;
+    filter: invert(24%) sepia(43%) saturate(389%) hue-rotate(170deg) brightness(98%) contrast(94%);
   }
   .title {
     display: block;
@@ -107,6 +108,18 @@ export default {
     color: #526488;
     word-spacing: 0.5vw;
     margin: 0.5vw 0 2vw;
+  }
+  #first-drawing {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: -10vh;
+  }
+  #second-drawing{
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: -3vh;
   }
 }
 // Extra large devices (large desktops, 1200px and up)

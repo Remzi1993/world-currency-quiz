@@ -9,6 +9,46 @@
 
   <div class="row intro">
     <div class="col pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <!-- First drawing -->
+        <div id="first-drawing">
+          <svg>
+            <g>
+              <path d="M 50,100 A 1,1 0 0 1 50,0"/>
+            </g>
+            <g>
+              <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
+            </g>
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#FF56A1;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#FF9350;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <!-- Second drawing -->
+        <div id="second-drawing">      
+          <div class="infinity">
+              <div>
+                  <span></span>
+              </div>
+              <div>
+                  <span></span>
+              </div>
+              <div>
+                  <span></span>
+              </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
+              <defs>
+                  <filter id="goo">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                      <feBlend in="SourceGraphic" in2="goo" />
+                  </filter>
+              </defs>
+          </svg>
+        </div>
       <img class="logo" src="../assets/logo.svg" alt="Money logo">
       <h1 class="display-4">What is the currency of {{currencies[0].stateOrTerritory}}?</h1>
       <p class="lead">A currency is a kind of money and medium of exchange. Currency includes paper, cotton, or polymer banknotes and metal coins. States generally have a monopoly on the issuing of currency, although some states share currencies with other states. For the purposes of this quiz, only currencies that are legal tender, including those used in actual commerce or issued for commemorative purposes, are considered "circulating currencies".</p>
@@ -63,12 +103,28 @@
     </div>
   </div>
 
-  <div class="row intro">
+  <div class="row">
     <div class="col pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
       <router-link to="/" class="button-yellow" v-on:click.native="closeFullscreen()">Exit Quiz</router-link>
+        <!-- Third drawing -->
+        <div id="third-drawing">      
+          <svg>
+            <g>
+              <path d="M 50,100 A 1,1 0 0 1 50,0"/>
+            </g>
+            <g>
+              <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
+            </g>
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#FF56A1;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#FF9350;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div> 
     </div>
   </div>
-
   </div>
 </template>
 
@@ -192,11 +248,34 @@ body {
   .card-deck {
     flex-flow: column;
   }
-
+  #first-drawing {
+    left: 5%;
+    top: 10vh;
+  }
+  #second-drawing{
+    right: 10%;
+    top: 10vh;
+  }
+  #third-drawing{
+    right: 20%;
+    bottom: -7vh;
+    filter:invert(100%);
+  }
   // Large devices (desktops, 992px and up)
   @media (min-width: 992px) {
     .card-deck {
       flex-flow: row wrap;
+    }
+  }
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    #first-drawing {
+      left: 25%;
+      top: 9vw;
+    }
+    #second-drawing{
+      right: 40%;
+      top: 30vw;
     }
   }
 }

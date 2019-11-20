@@ -74,11 +74,10 @@
   #app { min-height: 90vh; }
 }
 
-#first-drawing {
+#first-drawing,
+#third-drawing {
   position: absolute;
   z-index: -1;
-  left: 0;
-  bottom: -10vh;
   $transition-duration: 2s;
   $path-length: 157px; // Retrieved using SVG's getTotalLength()
   svg {
@@ -130,11 +129,9 @@
   }
 }
 
-#second-drawing{
+#second-drawing {
   position: absolute;
   z-index: -1;
-  right: 0;
-  bottom: -3vh;
   $color: #8C6FF0;
   $colorRight: #5628EE;
   $colorLeft: #23C4F8;
