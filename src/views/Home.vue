@@ -19,10 +19,9 @@
 export default {
   name: 'Home',
     methods: {
-    requestFullscreen() {
-      const elem = document.documentElement;
-      openFullscreen()
-      function openFullscreen() {
+    requestFullscreen:function(){
+        const elem = document.documentElement;
+
         if (elem.requestFullscreen) {
           elem.requestFullscreen();
         } else if (elem.mozRequestFullScreen) { /* Firefox */
@@ -32,7 +31,6 @@ export default {
         } else if (elem.msRequestFullscreen) { /* IE/Edge */
           elem.msRequestFullscreen();
         }
-      }
     }
   }
 }
@@ -65,33 +63,6 @@ export default {
     color: #526488;
     word-spacing: 0.5vw;
     margin: 0.5vw 0 2vw;
-  }
-  %button {
-    display: inline-block;
-    border-radius: 4px;
-    text-decoration: none;
-    padding: 10px 30px;
-  }
-  .button-green {
-    @extend %button;
-    border: 1px solid #3b8070;
-    color: #3b8070;
-  }
-  .button-green:hover {
-    color: #fff;
-    background-color: #3b8070;
-    text-decoration: none;
-  }
-  .button-grey {
-    @extend %button;
-    border: 1px solid #35495e;
-    color: #35495e;
-    margin-left: 15px;
-  }
-  .button-grey:hover {
-    color: #fff;
-    background-color: #35495e;
-    text-decoration: none;
   }
 }
 // Extra large devices (large desktops, 1200px and up)

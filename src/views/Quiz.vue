@@ -7,14 +7,15 @@
       Your browser does not support the audio element.
     </audio>
 
-  <div class="row">
+  <div class="row intro">
     <div class="col pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <img class="logo" src="../assets/logo.svg" alt="Money logo">
       <h1 class="display-4">What is the currency of {{currencies[0].stateOrTerritory}}?</h1>
       <p class="lead">A currency is a kind of money and medium of exchange. Currency includes paper, cotton, or polymer banknotes and metal coins. States generally have a monopoly on the issuing of currency, although some states share currencies with other states. For the purposes of this quiz, only currencies that are legal tender, including those used in actual commerce or issued for commemorative purposes, are considered "circulating currencies".</p>
     </div>
   </div>
 
-  <div class="container">
+  <div class="row">
     <div class="col">
       <div class="card-deck mb-3 text-center">
 
@@ -59,6 +60,12 @@
         </div>
 
       </div>
+    </div>
+  </div>
+
+  <div class="row intro">
+    <div class="col pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <router-link to="/" class="button-grey" v-on:click.native="closeFullscreen()">Exit Quiz</router-link>
     </div>
   </div>
 
@@ -150,22 +157,47 @@ export default {
 
   },
   methods: {
-    // back() {
-    //   this.$router.push("/");
-    // }
+    closeFullscreen:function(){
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+          location.reload();
+        } else if (document.mozCancelFullScreen) { /* Firefox */
+          document.mozCancelFullScreen();
+          location.reload();
+        } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+          document.webkitExitFullscreen();
+          location.reload();
+        } else if (document.msExitFullscreen) { /* IE/Edge */
+          document.msExitFullscreen();
+          location.reload();
+        }
+    }
   }
 };
 </script>
 
 <style lang="scss">
-.card-deck {
-  flex-flow: column;
+body {
+  background: #1b2a49;
 }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+.quiz {
+  .intro {
+    color: #fff;
+    .logo {
+      max-width: 15vw;
+      margin: 2vh 0 1vh;
+      filter: invert(100%);
+    }
+  }
   .card-deck {
-    flex-flow: row wrap;
+    flex-flow: column;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    .card-deck {
+      flex-flow: row wrap;
+    }
   }
 }
 </style>

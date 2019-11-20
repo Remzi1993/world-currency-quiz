@@ -36,6 +36,26 @@
     background-color: #35495e;
     text-decoration: none;
   }
+  // Primary button
+  .btn-outline-primary {
+    color: #293462;
+    border-color: #293462;
+  }
+  .btn-outline-primary:not(:disabled):not(.disabled):active,
+  .btn-outline-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-primary.dropdown-toggle,
+  .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #f7be16;
+    border-color: #f7be16;
+  }
+  .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+  .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-outline-primary.dropdown-toggle:focus,
+  .btn-outline-primary:focus,
+  .btn-outline-primary.focus  {
+    box-shadow: 0 0 0 0.2rem rgba(247, 225, 22, 0.5);
+  }
 }
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
