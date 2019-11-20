@@ -9,6 +9,50 @@
         <h2 class="subtitle">
           Made by Remzi Cavdar
         </h2>
+
+        <!-- First drawing -->
+        <div id="first-drawing">
+          <svg>
+            <g>
+              <path d="M 50,100 A 1,1 0 0 1 50,0"/>
+            </g>
+            <g>
+              <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
+            </g>
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:#FF56A1;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#FF9350;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- Second drawing -->
+        <div id="second-drawing">      
+          <div class="infinity">
+              <div>
+                  <span></span>
+              </div>
+              <div>
+                  <span></span>
+              </div>
+              <div>
+                  <span></span>
+              </div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
+              <defs>
+                  <filter id="goo">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                      <feBlend in="SourceGraphic" in2="goo" />
+                  </filter>
+              </defs>
+          </svg>
+        </div>
+        
+        <!-- Button -->
         <router-link to="/quiz" class="button-green" v-on:click.native="requestFullscreen()">Start Quiz</router-link>
       </div>
     </div>

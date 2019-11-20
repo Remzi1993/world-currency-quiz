@@ -65,7 +65,7 @@
 
   <div class="row intro">
     <div class="col pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <router-link to="/" class="button-grey" v-on:click.native="closeFullscreen()">Exit Quiz</router-link>
+      <router-link to="/" class="button-yellow" v-on:click.native="closeFullscreen()">Exit Quiz</router-link>
     </div>
   </div>
 
