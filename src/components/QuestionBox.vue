@@ -1,5 +1,7 @@
 <template>
   <div class="question-component">
+    
+    <v-dialog/>
 
     <div class="row intro">
       <div class="col pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
@@ -52,7 +54,8 @@ export default {
   props: {
     currentQuestion: Object,
     next: Function,
-    increment: Function
+    increment: Function,
+    numTotal: Number,
   },
   data: function() {
     return {
@@ -73,6 +76,12 @@ export default {
     }
   },
   methods: {
+    show () {
+      this.$modal.show();
+    },
+    hide () {
+      this.$modal.hide();
+    },
     selectAnswer(index) {
       this.selectedIndex = index
     },
@@ -84,6 +93,39 @@ export default {
       this.answered = true
       this.increment(isCorrect)
 
+      // console.log('hsfjhsf', this.numTotal);
+      
+      if (this.numTotal === 9) {
+        return this.$modal.show('dialog', {
+          title: 'That was the last question',
+          text: 'You have completed the quiz!',
+          buttons: [
+            {
+              default: true,
+              title: 'Close'
+            }
+          ]
+        })
+        // return () => {
+        //   this.$modal.show('dialog', {
+        //     title: 'That was the last question',
+        //     text: 'You have completed the quiz!',
+        //     buttons: [
+        //       {
+        //         default: true,
+        //         title: 'Close'
+        //       }
+        //     ]
+        //   })
+
+        //   setTimeout(() => {
+        //     this.$router.push('/')
+        //     location.reload();
+        //   }, 2000);
+
+        // }
+      }
+      
       setTimeout(() => this.next(), 1000);
     },
     shuffleAnswers() {
@@ -104,7 +146,6 @@ export default {
       ) {
         answerClass = 'incorrect'
       }
-
       return answerClass
     }
   }
