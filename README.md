@@ -1,4 +1,4 @@
-# World Currency Quiz
+# From Dollars to Dinars: The World Currency Quiz
 
 How many types of world currency can you name?
 
