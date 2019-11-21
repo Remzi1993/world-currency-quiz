@@ -51,7 +51,7 @@
         </div>
       <img class="logo" src="../assets/logo.svg" alt="Money logo">
       <h1 class="display-4">What is the currency of {{currencies[0].stateOrTerritory}}?</h1>
-      <p class="lead">A currency is a kind of money and medium of exchange. Currency includes paper, cotton, or polymer banknotes and metal coins. States generally have a monopoly on the issuing of currency, although some states share currencies with other states. For the purposes of this quiz, only currencies that are legal tender, including those used in actual commerce or issued for commemorative purposes, are considered "circulating currencies".</p>
+      <p class="lead">A currency is a kind of money and medium of exchange. Currency includes paper, cotton, or polymer banknotes and metal coins. States generally have a monopoly on the issuing of currency, although some states share currencies with other states. For the purposes of this quiz, only currencies that are legal tender and those used in actual commerce, are included in the quiz.</p>
     </div>
   </div>
 
