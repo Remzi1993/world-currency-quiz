@@ -31,12 +31,13 @@
         </div>
       </div>
     </div>
-  
+
     <b-button
-      variant="success"
+      variant="outline-success"
       @click="submitAnswer"
       :disabled="selectedIndex === null || answered"
       id="submit"
+      size="lg"
     >
       Submit
     </b-button>

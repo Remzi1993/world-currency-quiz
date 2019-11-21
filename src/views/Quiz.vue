@@ -1,6 +1,6 @@
 <template>
   <div class="container quiz">
-    <!-- Dirty hack for backgorund music: https://stackoverflow.com/questions/50490304/how-to-make-audio-autoplay-on-chrome -->
+    <!-- Dirty hack for background music: https://stackoverflow.com/questions/50490304/how-to-make-audio-autoplay-on-chrome -->
     <iframe src="../assets/soundtrack.webm" allow="autoplay" style="display:none"></iframe> 
     <audio autoplay loop>
       <source src="../assets/soundtrack.webm">
@@ -21,7 +21,11 @@
 
     <div class="row last">
       <div class="col pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <router-link to="/" class="button-yellow" v-on:click.native="closeFullscreen()">Exit Quiz</router-link>
+        <router-link to="/" class="button-yellow" id="popover-target-1" v-on:click.native="closeFullscreen()">Exit Quiz</router-link>
+          <b-popover target="popover-target-1" triggers="hover" placement="top">
+            <template v-slot:title>Are you sure?</template>
+              Exit already?
+          </b-popover>
       </div>
     </div>
 
@@ -207,7 +211,7 @@ body {
     }
     #second-drawing{
       position: absolute;
-      top: 64%;
+      top: 67%;
       left: 50%;
       transform: translate(-50%, -50%);
       right: auto;
