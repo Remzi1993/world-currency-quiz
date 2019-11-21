@@ -145,7 +145,12 @@ export default {
       margin: 1vw 0 8vw;
     }
     #first-drawing {
-      bottom: -10vh;
+      bottom: -9vh;
+      left: 5vw;
+    }
+    #second-drawing {
+      bottom: 6vh;
+      right: 5vw;
     }
   }
 }
