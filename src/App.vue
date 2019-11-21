@@ -1,10 +1,39 @@
 <template>
   <div id="app">
     <router-view/>
+    <footer>
+      <div class="container">
+        <p class="h6">Remzi Cavdar from 🎓 Codaisseur Academy - class 31 - 📅 November 2019</p>
+      </div>
+    </footer>
   </div>
 </template>
 
 <style lang="scss">
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  // height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background: #526488;
+  color: #fff;
+  p {
+    margin: 0 !important;
+    padding: 0.3rem;
+    text-align: center;
+  }
+}
+
 #app {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

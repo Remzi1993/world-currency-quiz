@@ -1,6 +1,10 @@
-# World Currency Quiz
+# From Dollars to Dinars: The World Currency Quiz
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/329f630c-f386-408e-83e2-edd663144ad3/deploy-status)](https://app.netlify.com/sites/gifted-nobel-c3eeae/deploys)
+How many types of world currency can you name?
+
+## Project status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/329f630c-f386-408e-83e2-edd663144ad3/deploy-status)](https://app.netlify.com/sites/world-currency-quiz/deploys)
 
 ## Project setup
 
