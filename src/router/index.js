@@ -17,14 +17,6 @@ const routes = [
     // this generates a separate chunk (quizs.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "quiz" */ '../views/Quiz.vue')
-  },
-  {
-    path: '/end',
-    name: 'end',
-    // route level code-splitting
-    // this generates a separate chunk (quizs.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "quiz" */ '../views/QuizEnd.vue')
   }
 ]
 
