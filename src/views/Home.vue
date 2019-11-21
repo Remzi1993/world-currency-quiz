@@ -90,21 +90,20 @@ export default {
   align-items: center;
   min-height: 60vh;
   .logo {
-    max-width: 15vw;
-    margin-bottom: 2vw;
+    margin-bottom: 6vw;
     filter: invert(24%) sepia(43%) saturate(389%) hue-rotate(170deg) brightness(98%) contrast(94%);
   }
   .title {
     display: block;
     font-weight: 300;
-    font-size: 5vw;
+    font-size: 8vw;
     color: #35495e;
     letter-spacing: 0.1vw;
     margin: 0;
   }
   .subtitle {
     font-weight: 300;
-    font-size: 3vw;
+    font-size: 5vw;
     color: #526488;
     word-spacing: 0.5vw;
     margin: 0.5vw 0 2vw;
@@ -113,7 +112,7 @@ export default {
     position: absolute;
     z-index: -1;
     left: 0;
-    bottom: -10vh;
+    bottom: -20vh;
   }
   #second-drawing{
     position: absolute;
@@ -122,8 +121,39 @@ export default {
     bottom: -3vh;
   }
 }
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .home {
+    .logo {
+      max-width: 80%;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .home {
+    .logo {
+      max-width: 15vw;
+      margin-bottom: 2vw;
+    }
+    .title {
+      font-size: 5vw;
+    }
+    .subtitle {
+      font-size: 3vw;
+      margin: 1vw 0 8vw;
+    }
+    #first-drawing {
+      bottom: -10vh;
+    }
+  }
+}
+
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .home { min-height: 90vh; }
+  .home {
+    min-height: 90vh;
+  }
 }
 </style>
