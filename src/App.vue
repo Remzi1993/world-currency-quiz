@@ -3,7 +3,7 @@
     <router-view/>
     <footer>
       <div class="container">
-        <p class="h5">Remzi Cavdar from 🎓 Codaisseur Academy - class 31 - 📅 November 2019</p>
+        <p class="h6">Remzi Cavdar from 🎓 Codaisseur Academy - class 31 - 📅 November 2019</p>
       </div>
     </footer>
   </div>
@@ -25,7 +25,7 @@ footer {
   width: 100%;
   // height: 60px; /* Set the fixed height of the footer here */
   line-height: 60px; /* Vertically center the text there */
-  background: #35495e;
+  background: #526488;
   color: #fff;
   p {
     margin: 0 !important;
