@@ -106,7 +106,7 @@ export default {
     };
   },
   mounted: function() {
-    fetch('https://api.myjson.com/bins/14ra0m', {
+    fetch('https://api.myjson.com/bins/15fpna', {
       method: 'get'
     })
       .then((response) => {

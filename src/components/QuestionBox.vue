@@ -36,6 +36,7 @@
       variant="success"
       @click="submitAnswer"
       :disabled="selectedIndex === null || answered"
+      id="submit"
     >
       Submit
     </b-button>
@@ -82,7 +83,7 @@ export default {
       this.answered = true
       this.increment(isCorrect)
 
-      setTimeout(() => this.next(), 1500);
+      setTimeout(() => this.next(), 1000);
     },
     shuffleAnswers() {
       let answers = [...this.currentQuestion.incorrect_answers, this.currentQuestion.correct_answer]
@@ -110,11 +111,14 @@ export default {
 </script>
 
 <style scoped>
+#submit {
+  float: right;
+}
 .card:hover {
   cursor: pointer;
 }
 .selected {
-  background-color: lightblue;
+  background-color: #f7be16;
 }
 .correct {
   background-color: lightgreen;

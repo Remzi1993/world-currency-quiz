@@ -3,7 +3,7 @@
     <router-view/>
     <footer>
       <div class="container">
-        <p class="h6">Remzi Cavdar from 🎓 Codaisseur Academy - class 31 - 📅 November 2019</p>
+        <p class="h6"><a href="https://www.linkedin.com/in/remzicavdar/">Remzi Cavdar</a> from 🎓 <a href="https://codaisseur.com">Codaisseur Academy</a> - class 31 - 📅 November 2019</p>
       </div>
     </footer>
   </div>
@@ -31,6 +31,9 @@ footer {
     margin: 0 !important;
     padding: 0.3rem;
     text-align: center;
+  }
+  a, a:hover {
+    color: #fff;
   }
 }
 
