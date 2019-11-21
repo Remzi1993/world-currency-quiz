@@ -17,6 +17,7 @@
       :currentQuestion="questions[index]"
       :next="next"
       :increment="increment"
+      :numTotal="numTotal"
     />
 
     <div class="row last">

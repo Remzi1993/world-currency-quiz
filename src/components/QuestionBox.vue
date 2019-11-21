@@ -52,7 +52,8 @@ export default {
   props: {
     currentQuestion: Object,
     next: Function,
-    increment: Function
+    increment: Function,
+    numTotal: Number
   },
   data: function() {
     return {
@@ -84,6 +85,12 @@ export default {
       this.answered = true
       this.increment(isCorrect)
 
+      // console.log('hsfjhsf', this.numTotal);
+      
+      if (this.numTotal === 9) {
+        return this.quizEnd()
+      }
+
       setTimeout(() => this.next(), 1000);
     },
     shuffleAnswers() {
@@ -104,8 +111,11 @@ export default {
       ) {
         answerClass = 'incorrect'
       }
-
       return answerClass
+    },
+    quizEnd() {
+      this.$router.push("/end");
+      location.reload();
     }
   }
 }
