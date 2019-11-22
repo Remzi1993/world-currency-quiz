@@ -7,7 +7,7 @@
           World Currency Quiz
         </h1>
         <h2 class="subtitle">
-          Made by Remzi Cavdar
+          By Remzi Cavdar
         </h2>
 
         <!-- First drawing -->
