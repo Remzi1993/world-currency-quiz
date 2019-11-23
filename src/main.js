@@ -8,7 +8,7 @@ import VModal from 'vue-js-modal'
 
 Vue.use(VModal, { dialog: true })
 Vue.use(BootstrapVue)
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 Vue.prototype.$log = console.log
 
 new Vue({
